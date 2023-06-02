@@ -218,9 +218,13 @@ globalkeys = gears.table.join(
     awful.key({modkey}, "r", function() awful.screen.focused().mypromptbox:run()    end,
         {description= "Launch run prompt", group= "launcher"}),
     -- DMENU
+    -- awful.key({ modkey },            "d",     function ()
+    -- awful.util.spawn("dmenu_run")  end,
+    --           {description = "Launch Dmenu", group = "Swastik's Addition"}),
+    -- Rofi
     awful.key({ modkey },            "d",     function ()
-    awful.util.spawn("dmenu_run")  end,
-              {description = "Launch Dmenu", group = "Swastik's Addition"}),
+        awful.util.spawn("rofi -show drun")  end,
+                  {description = "Launch Rofi", group = "Swastik's Addition"}),
     -- Screenshot
     awful.key({ },            "Print",     function ()
         awful.util.spawn("xfce4-screenshooter")  end,
@@ -231,7 +235,11 @@ globalkeys = gears.table.join(
               {description = "Launch Brave", group = "Swastik's Addition"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+    -- Powering System
+    awful.key({ modkey, "Shift" },            "p",     function ()
+        awful.util.spawn("powermenu")  end,
+                  {description = "Powering system(Menu)", group = "Swastik's Addition"})
 )
 
 clientkeys = gears.table.join(
