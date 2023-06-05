@@ -233,6 +233,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey },            "w",     function ()
     awful.util.spawn("brave")  end,
               {description = "Launch Brave", group = "Swastik's Addition"}),
+    -- Launch Thunar File browser
+    awful.key({ modkey, "Shift" },            "Return",     function ()
+        awful.util.spawn("thunar")  end,
+                  {description = "Launch Thunar", group = "Swastik's Addition"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
@@ -476,12 +480,8 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Auto start
 beautiful.useless_gap= 5
-
--- Autostart app
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("kmix")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("/home/swastik/.config/polybar/launch.sh")
+-- Autostart applications
+awful.spawn.with_shell("~/.config/awesome/autostart.sh")
+-- only for the Touchpad to work
+awful.spawn.with_shell("~/.config/awesome/xinput.sh") 
