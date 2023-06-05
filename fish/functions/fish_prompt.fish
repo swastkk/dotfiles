@@ -1,0 +1,1 @@
+/home/swastik/.local/share/omf/themes/mish/fish_prompt.fish
