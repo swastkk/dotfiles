@@ -35,3 +35,9 @@ Add the following to the end of `~/.config/fish/config.fish:`
 ```bash
 starship init fish | source
 ```
+Configure starship
+
+```
+mkdir -p ~/.config && touch ~/.config/starship.toml
+``
+Then make copy my `starship.toml` file to use configuration 
