@@ -4,22 +4,7 @@ Basic Setup look
 ![img](screenshot1.png)
 
 ## Extras
-1. Install Fish
-```
-sudo apt-add-repository ppa:fish-shell/release-3
-```
-```
-sudo apt-get update && sudo apt-get upgrade
-```
-```
-sudo apt-get install fish
-```
-Set Fish as Default shell
-```
-sudo chsh -s /usr/local/bin/fish
-```
-
-2. Add Starship
+### Add Starship
    
 Install Starship
 ```bash
@@ -37,7 +22,8 @@ starship init fish | source
 ```
 Configure starship
 
-```
+```bash
 mkdir -p ~/.config && touch ~/.config/starship.toml
-``
+```
+
 Then make copy my `starship.toml` file to use configuration 
