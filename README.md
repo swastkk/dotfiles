@@ -1,7 +1,5 @@
 # dotfiles
 My config files for Linux customization.
-Basic Setup look
-![img](screenshot1.png)
 
 ## Extras
 ### Add Starship
@@ -27,3 +25,7 @@ mkdir -p ~/.config && touch ~/.config/starship.toml
 ```
 
 Then make copy my `starship.toml` file to use configuration 
+
+### Nerd Fonts
+
+[Nerd Font Download](https://www.nerdfonts.com/font-downloads)
